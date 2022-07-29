@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>카카오 테스트</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>	
+	<script defer src='/build/bundle.js'></script>
+	<script async src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+	<script async>
+		function initialize (body) {
+			Kakao.init("d6f07c9ac1bc161138392927472aacfe");
+			Kakao.Link.createCustomButton({ container: body.kakao, templateId: 80490 });			
+		}
+	</script>
+</head>
+
+<body onload="initialize(this)">
+	<h1>
+		모바일 청첩장 전송하기<br />
+		<a id="kakao">
+		  <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="195" height="195" style="max-width: 500%; height: auto;" alt="" />
+		</a> 전송버튼
+	</h1>
+</body>
+
+</html>
